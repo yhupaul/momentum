@@ -1,11 +1,7 @@
-const player ={
-  name: "dan",
-  point: 10,
-  fat: true,
-};
-console.log(player);
-player.lastName = "you";
-player.point = player.point + 15;
-//player.point = 15;
-console.log(player);
+function sayHello(nameOfPerson, age) {
+  console.log("Hello my name is " + nameOfPerson + " and I'm " + age)
+}
 
+sayHello("nico", 10);
+sayHello("dan", 21);
+sayHello("lynn", 25);
