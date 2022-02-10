@@ -1,6 +1,12 @@
 .hidden {
   display: none;
 }
+#greeting {
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  color: cornsilk;
+}
 
 *{
   box-sizing: border-box;
@@ -20,8 +26,16 @@ body {
  z-index: -1;
 }
 
-form {
+
+.top {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  color: cornsilk;
+}
+
+#quete {
+  font-size: 40px;
+  color: cornsilk;
+  display: flex;
+  align-content: flex-end;
 }
