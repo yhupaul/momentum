@@ -51,7 +51,7 @@ body {
   display: flex;
   justify-content: center;
   align-content: flex-end;
-  margin-top: 350px;
+  margin-top: auto;
 }
 
 .quote {
@@ -76,6 +76,10 @@ body {
   
 }
 
+ul {
+  list-style-type: none;
+}
+
 #todo-list {
   display: flex;
   flex-direction: column;
@@ -84,7 +88,6 @@ body {
   color: cornsilk;
 }
 
-/* CSS */
 #todo-list li button {
   appearance: none;
   background-color: cornsilk;
@@ -100,7 +103,7 @@ body {
   font-weight: 500;
   line-height: 20px;
   list-style: none;
-  padding: 6px 16px;
+  padding: 4px 8px;
   position: relative;
   transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
   user-select: none;
