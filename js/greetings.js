@@ -14,7 +14,7 @@ function onLoginSubmit(event) {
   loginInput.classList.add(HIDDEN_CLASSNAME);
   localStorage.setItem(USERNAME_KEY, usernameThatTheUserWrote);
   paintGreetings(usernameThatTheUserWrote);
-  location.reload();
+  location.reload();  
 }
 
 function paintGreetings(username) {
@@ -23,23 +23,23 @@ function paintGreetings(username) {
 }
 
 function rename() {
-  // alert("유저네임을 바꾸시겠습니까?");
   localStorage.removeItem(USERNAME_KEY);
   greeting.classList.add(HIDDEN_CLASSNAME);
   loginBtn.classList.remove(HIDDEN_CLASSNAME);
   loginInput.classList.remove(HIDDEN_CLASSNAME);
   loginForm.classList.remove(HIDDEN_CLASSNAME);
+  location.reload();
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-if (savedUsername === null) {
+if (savedUsername !== null) {
+  paintGreetings(savedUsername);
+  greeting.addEventListener("click", rename);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginBtn.classList.remove(HIDDEN_CLASSNAME);
   loginInput.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", onLoginSubmit);
-} else {
-  paintGreetings(savedUsername);
-  greeting.addEventListener("click", rename);
   loginForm.addEventListener("submit", onLoginSubmit);
 }

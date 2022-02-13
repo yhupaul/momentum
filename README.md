@@ -1,6 +1,14 @@
 # momentum
 
+Mommentum is a todolist website for organizing daliy duties.
+
 Learning Javascript by Making a Productivity App
 
-HTML, CSS, Javascript
+# Screenshots
+
+
+# Dependencies
+- HTML 
+- CSS 
+- Javascript
 

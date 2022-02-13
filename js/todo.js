@@ -12,8 +12,8 @@ function saveToDo() {
 
 function deleteToDo(event) {
   const li = event.target.parentElement;
-  toDos =toDos.filter((todo) => todo.id !== parseInt(li.id));
   li.remove();
+  toDos =toDos.filter((todo) => todo.id !== parseInt(li.id));
   saveToDo()
 }
 
@@ -22,7 +22,7 @@ function paintToDo(newTodo) {
   li.id = newTodo.id;
   const checkbox =document.createElement("input");
   checkbox.type = 'checkbox';
-  // checkbox.setAttribute('id', 'check');
+  checkbox.setAttribute('id', 'check');
   const span = document.createElement("span");
   span.innerText = newTodo.text;
   const button = document.createElement("button");
@@ -31,7 +31,7 @@ function paintToDo(newTodo) {
   li.appendChild(checkbox);
   li.appendChild(span);
   li.appendChild(button);
-  toDoList.appendChild(li);
+  toDoList.append(li);
 }
 
 
