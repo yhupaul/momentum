@@ -14,7 +14,7 @@ function onLoginSubmit(event) {
   loginInput.classList.add(HIDDEN_CLASSNAME);
   localStorage.setItem(USERNAME_KEY, usernameThatTheUserWrote);
   paintGreetings(usernameThatTheUserWrote);
-  location.reload();  
+  location.reload();
 }
 
 function paintGreetings(username) {
