@@ -6,6 +6,7 @@ const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
+
 function onLoginSubmit(event) {
   event.preventDefault();
   const usernameThatTheUserWrote = loginInput.value;
@@ -24,10 +25,12 @@ function paintGreetings(username) {
 
 function rename() {
   localStorage.removeItem(USERNAME_KEY);
+  localStorage.clear();
   greeting.classList.add(HIDDEN_CLASSNAME);
   loginBtn.classList.remove(HIDDEN_CLASSNAME);
   loginInput.classList.remove(HIDDEN_CLASSNAME);
   loginForm.classList.remove(HIDDEN_CLASSNAME);
+  
   location.reload();
 }
 
